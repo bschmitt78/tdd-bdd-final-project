@@ -242,7 +242,7 @@ class TestProductRoutes(TestCase):
             for product in data:
                 self.assertEqual(product["category"], category.name)
 
-        def test_query_by_availability(self):
+        def test_list_by_availability(self):
             """It should Query Products by availability"""
             products = self._create_products(10)
             available_products = [product for product in products if product.available is True]
